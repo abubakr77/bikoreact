@@ -1,0 +1,10 @@
+body {
+  background: #831111;
+}
+.App {
+  width: 50%;
+  border-radius: 17px;
+  padding: 10px;
+  background: #153466;
+  margin: 27px auto;
+}

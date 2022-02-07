@@ -1,0 +1,83 @@
+import React, { Component } from "react";
+import { add_Remindr, remove_Reminder, clear_Reminder } from "../actions";
+import { connect } from "react-redux";
+import moment from "moment";
+class App extends Component {
+  state = {
+    text: "",
+    date: new Date(),
+  };
+  render_reminder = () => {
+    const reminders = this.props.reminders;
+    return (
+      <ul className="list-group">
+        {reminders.map((reminder) => {
+          return (
+            <li key={reminder.id} className="list-group-item">
+              <div>{reminder.text}</div>
+              <div>{moment(new Date(reminder.date)).fromNow}</div>
+              <div
+                className="remove x btn btn-danger"
+                onClick={() => this.props.remove_Reminder(reminder.id)}
+              ></div>
+            </li>
+          );
+        })}
+      </ul>
+    );
+  };
+  render() {
+    return (
+      <div className="App">
+        <img src="" alt="bikoo"></img>
+        <div className="title-reminder">What Should U Do</div>
+        <input
+          type="text"
+          placeholder="what should u do"
+          className="form-control"
+          value={this.state.text}
+          onChange={(e) => this.setState({ text: e.target.value })}
+        ></input>
+        <input
+          type="datetime-local"
+          className="form-control"
+          value={this.state.date}
+          onChange={(e) => this.setState({ date: e.target.value })}
+        ></input>
+        <button
+          className="btn btn-primary w-100"
+          onClick={() => {
+            this.props.add_Remindr(this.state.text, this.state.date);
+
+            this.setState({ text: "", date: "" });
+          }}
+        >
+          Add Reminder
+        </button>
+        {this.render_reminder()}
+        <button
+          className="btn btn-danger w-100"
+          onClick={() => {
+            this.props.clear_Reminder();
+          }}
+        >
+          {" "}
+          Clear Reminder
+        </button>
+      </div>
+    );
+  }
+}
+// function mapDispatchToProps(dispatch) {
+//   return {
+//     add_Remindr: () => dispatch(add_Remindr()),
+//   };
+// }
+function mapStP(state) {
+  return { reminders: state };
+}
+export default connect(mapStP, {
+  add_Remindr,
+  remove_Reminder,
+  clear_Reminder,
+})(App);
