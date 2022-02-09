@@ -1,0 +1,4 @@
+1-actoin type
+2-actoin creators
+3-reducers
+4-jsx

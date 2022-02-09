@@ -1,0 +1,98 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background: coral;
+  margin: 0;
+}
+h2 {
+  background: coral;
+  padding: 18px;
+  color: #fff;
+}
+.App {
+  padding: 30px;
+  background: #fff;
+  width: 80%;
+  margin: 50px auto;
+  box-shadow: 1px 2px 5px #eee;
+}
+input {
+  width: 80%;
+  border: 0;
+  padding: 6px 10px;
+  background: #e8e8e8;
+}
+button {
+  width: 20%;
+  border: 0;
+  padding: 6px 0;
+  margin: 0;
+  outline: 0;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  background: #4dc55b;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+li {
+  margin: 15px 0;
+}
+li span {
+  display: inline-block;
+  width: 55%;
+  color: #6a6a6a;
+}
+li > button:first-of-type {
+  background: #6a6a6a;
+  color: #fff;
+  margin-right: 1%;
+}
+li > button:last-of-type {
+  background: coral;
+  color: #fff;
+}
+
+/* div {
+  margin-bottom: 10px;
+}
+label,
+h1 {
+  padding-left: 10px;
+}
+input[type="checkbox"] {
+  margin-left: 10px;
+}
+body {
+  background-color: gold;
+}
+.green {
+  color: burlywood;
+}
+
+.star {
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  margin: 2px;
+  float: left;
+  background-color: grey;
+  clip-path: polygon(
+    50% 0%,
+    63% 38%,
+    100% 38%,
+    69% 59%,
+    82% 100%,
+    50% 75%,
+    18% 100%,
+    31% 59%,
+    0% 38%,
+    37% 38%
+  );
+}
+.star.selected {
+  background-color: red;
+} */

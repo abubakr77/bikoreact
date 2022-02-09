@@ -1,0 +1,15 @@
+body {
+  font-family: "open sans", "serif";
+  margin: 0;
+}
+.wrapper {
+  background: linear-gradient(#7b7b7b, #5ccab5);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-cont {
+  background: #2c5046;
+  height: 70vh;
+}

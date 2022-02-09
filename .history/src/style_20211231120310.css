@@ -1,0 +1,7 @@
+body {
+  font-family: "open sans", "serif";
+  margin: 0;
+}
+.wrapper {
+  background: linear-gradient(#7b7b7b, #5ccab5);
+}
