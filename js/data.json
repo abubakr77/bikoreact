@@ -1,4 +1,5 @@
-{  
+
+ {  
     "works" : [
         {
             "id" : 1,
@@ -27,7 +28,7 @@
         },
         {
             "id":2,
-            "image": "/images/portfolio-img2.jpg"
+            "image": "./images/portfolio-img2.jpg"
         },
         {
             "id":3,
